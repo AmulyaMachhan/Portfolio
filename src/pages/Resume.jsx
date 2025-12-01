@@ -1,3 +1,5 @@
+import { Download } from "lucide-react";
+
 export default function Resume() {
   return (
     <section className="mx-10 px-6 py-16 text-gray-100 bg-gradient-to-br from-silver-900 via-silver-800 to-silver-900 min-h-screen">
@@ -29,26 +31,66 @@ export default function Resume() {
             </a>
           </div>
           <div className="flex flex-wrap gap-3">
-            {["GitHub", "LinkedIn", "Portfolio"].map((platform) => (
+            {/* Social Links */}
+            <div className="flex flex-wrap gap-3">
+              {["GitHub", "LinkedIn", "Portfolio"].map((platform) => (
+                <a
+                  key={platform}
+                  href="#"
+                  className="group relative px-6 py-3 text-sm font-bold text-slate-200 bg-slate-700/50 hover:bg-fuchsia-500/20 border border-slate-600/50 hover:border-fuchsia-400/50 backdrop-blur-sm rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-fuchsia-500/25 flex items-center gap-2"
+                >
+                  {platform}
+                  <svg
+                    className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-all duration-300 ml-1 group-hover:translate-x-1"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </a>
+              ))}
+            </div>
+
+            {/* Download / View CV Buttons */}
+            <div className="flex flex-wrap gap-4 mt-8">
               <a
-                key={platform}
-                href="#"
-                className="group relative px-6 py-3 text-sm font-bold text-slate-200 bg-slate-700/50 hover:bg-fuchsia-500/20 border border-slate-600/50 hover:border-fuchsia-400/50 backdrop-blur-sm rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-fuchsia-500/25 flex items-center gap-2"
+                href="public/Resume_Amulya.pdf"
+                download
+                className="inline-flex items-center gap-3 px-8 py-4
+               bg-gradient-to-r from-fuchsia-500 to-purple-500
+               text-white font-black text-lg rounded-2xl
+               shadow-xl hover:shadow-2xl hover:shadow-fuchsia-500/40
+               transition-all duration-300 hover:scale-105"
               >
-                {platform}
+                <Download />
+                Download CV
+              </a>
+
+              <a
+                href="public/Resume_Amulya.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-8 py-4
+               bg-slate-700/60 hover:bg-slate-600/70
+               text-slate-200 font-black text-lg rounded-2xl
+               border border-slate-600/50 hover:border-fuchsia-400/50
+               shadow-xl transition-all duration-300 hover:scale-105"
+              >
                 <svg
-                  className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-all duration-300 ml-1 group-hover:translate-x-1"
+                  className="w-6 h-6"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
-                  <path
-                    fillRule="evenodd"
-                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  />
+                  <path d="M12 2a1 1 0 011 1v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0V7h-2a1 1 0 110-2h2V3a1 1 0 011-1z" />
+                  <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 100-2H5z" />
                 </svg>
+                View CV
               </a>
-            ))}
+            </div>
           </div>
         </div>
       </header>
