@@ -1,3 +1,5 @@
+import CurvedLoop from "../components/CurvedLoop";
+
 function About() {
   return (
     <>
@@ -37,14 +39,6 @@ function About() {
                 </p>
               </div>
 
-              <div className="flex justify-center gap-6 pt-8">
-                <div className="px-6 py-3 rounded-full border border-white/20 backdrop-blur-sm">
-                  <span className="text-white/70 text-sm font-medium">
-                    Scroll to explore
-                  </span>
-                </div>
-              </div>
-
               <div className="mt-16 flex justify-center animate-bounce">
                 <svg
                   className="w-8 h-8 text-white/40"
@@ -61,6 +55,15 @@ function About() {
                 </svg>
               </div>
             </div>
+          </div>
+
+          <div className="">
+            <CurvedLoop
+              marqueeText="✦ REACT ✦ NODE ✦ VERCEL ✦ MONGODB ✦ GIT "
+              speed={2}
+              curveAmount={0}
+              interactive={true}
+            />
           </div>
 
           {/* Main Content */}
@@ -94,12 +97,6 @@ function About() {
                 {/* Enhanced Text Content */}
                 <div className="space-y-8">
                   <div className="space-y-6">
-                    <div className="inline-block px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
-                      <span className="text-white/80 text-sm font-medium">
-                        👋 About Me
-                      </span>
-                    </div>
-
                     <h2 className="text-5xl lg:text-7xl font-bold text-white leading-tight">
                       Hi, I'm{" "}
                       <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -166,12 +163,12 @@ function About() {
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
                 {[
                   {
-                    number: "50+",
-                    label: "Projects Delivered",
+                    number: "10+",
+                    label: "Projects Created",
                     subtext: "Production ready",
                   },
                   {
-                    number: "5+",
+                    number: "1+",
                     label: "Years Experience",
                     subtext: "And counting",
                   },
