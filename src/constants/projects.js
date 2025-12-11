@@ -1,5 +1,3 @@
-import * as ProjectImages from "../assets/project";
-
 export const projects = [
   {
     id: 1,
