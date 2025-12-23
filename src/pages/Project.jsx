@@ -81,7 +81,7 @@ function ProjectCard({ project }) {
               </Motion.h3>
 
               <Motion.p
-                className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl leading-relaxed"
+                className="md:text-2xl text-gray-300 mb-8 max-w-2xl leading-relaxed"
                 animate={{ y: isHovered ? -10 : 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
               >
@@ -228,7 +228,7 @@ function Projects() {
   return (
     <section
       ref={sectionRef}
-      className="py-20 px-6 sm:px-12 bg-gradient-to-l from-orange-400"
+      className="sm:py-10 px-6 sm:px-12 bg-gradient-to-l from-orange-400"
     >
       <Motion.div style={{ opacity, scale }} className="max-w-7xl mx-auto">
         {/* Header */}
