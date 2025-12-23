@@ -5,7 +5,7 @@ function About() {
   return (
     <>
       {/* This outer div creates the scrollable height */}
-      <div className="relative">
+      <div className="relative py-10">
         <section id="about" className="w-full overflow-hidden">
           {/* Floating particles effect */}
           <div className="absolute inset-0 z-10 pointer-events-none">
