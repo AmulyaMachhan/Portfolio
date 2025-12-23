@@ -38,7 +38,7 @@ export const projects = [
     id: 4,
     title: "Early Learning",
     description:
-      "Early Learning is a real-time, production-ready client-side web application built for a preschool. This repository contains the frontend (client) code used by an actual preschool to showcase programs, facilities, admissions, and parent engagement features in a playful and child-friendly way",
+      "Early Learning is a real-time, production-ready client-side web application built for a preschool.",
     techStack: ["React", "HTML", "CSS"],
     image:
       "https://images.unsplash.com/photo-1758790015863-4f9798bb818f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
