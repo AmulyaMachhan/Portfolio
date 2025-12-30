@@ -54,7 +54,7 @@ const contactReasons = [
 
 export default function Contact() {
   return (
-    <section className="text-gray-100 overflow-hidden">
+    <section className="text-gray-100 ">
       {/* Section 1: Caption + Banners */}
       <Suspense
         fallback={<div className="w-full h-screen">Initializing Prism...</div>}
@@ -63,15 +63,10 @@ export default function Contact() {
       </Suspense>
       {/* Section 2: Contact Info + Form */}
       <div className="flex flex-col md:flex-row justify-evenly gap-10 py-25 px-4 lg:px-12">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(236,72,153,0.08),transparent_70%)]"></div>
+        <div className="[contain:layout] absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(236,72,153,0.08),transparent_70%)]"></div>
 
         {/* LEFT SIDE */}
-        <Motion.div
-          className="space-y-6 relative z-10"
-          initial={{ opacity: 0, x: -40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
-        >
+        <div className="space-y-6 relative z-10">
           {/* Header */}
           <div className="space-y-3">
             <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 via-pink-400 to-indigo-400">
@@ -136,16 +131,13 @@ export default function Contact() {
             “Code is where creativity meets logic — let’s make your idea come
             alive.”
           </p>
-        </Motion.div>
+        </div>
 
         {/* Right Side (Form) */}
-        <Motion.form
-          className="relative bg-gray-900 backdrop-blur-xl p-6 rounded-2xl border border-fuchsia-600/30 
-               space-y-5 overflow-hidden
+        <form
+          className="relative bg-gray-900 backdrop-blur-xl px-6 py-4 rounded-2xl border border-fuchsia-600/30 
+               space-y-3 overflow-hidden
              hover:shadow-[0_0_40px_-10px_rgba(236,72,153,0.5)] transition-shadow duration-500"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
         >
           {/* Header */}
           <div className="text-center space-y-1 relative z-10">
@@ -158,29 +150,29 @@ export default function Contact() {
           </div>
 
           {/* Inputs */}
-          <div className="text-sm grid grid-cols-2 gap-3 relative z-10">
+          <div className="text-sm grid grid-cols-2 gap-1.5 relative z-10">
             <input
               type="text"
               placeholder="First Name"
-              className="px-3 py-2 bg-gray-800/60 border border-gray-700 rounded-lg text-sm text-gray-100 placeholder-gray-500 focus:border-fuchsia-500 focus:ring-1 focus:ring-fuchsia-500/30 transition"
+              className="px-3 py-1.5 bg-gray-800/60 border border-gray-700 rounded-lg text-sm text-gray-100 placeholder-gray-500 focus:border-fuchsia-500 focus:ring-1 focus:ring-fuchsia-500/30 transition"
             />
             <input
               type="text"
               placeholder="Last Name"
-              className="px-3 py-2 bg-gray-800/60 border border-gray-700 rounded-lg text-sm text-gray-100 placeholder-gray-500 focus:border-fuchsia-500 focus:ring-1 focus:ring-fuchsia-500/30 transition"
+              className="px-3 py-1.5 bg-gray-800/60 border border-gray-700 rounded-lg text-sm text-gray-100 placeholder-gray-500 focus:border-fuchsia-500 focus:ring-1 focus:ring-fuchsia-500/30 transition"
             />
           </div>
 
           <input
             type="email"
             placeholder="Email Address"
-            className="w-full px-3 py-2 bg-gray-800/60 border border-gray-700 rounded-lg text-sm text-gray-100 placeholder-gray-500 focus:border-fuchsia-500 focus:ring-1 focus:ring-fuchsia-500/30 transition"
+            className="w-full px-3 py-1.5 bg-gray-800/60 border border-gray-700 rounded-lg text-sm text-gray-100 placeholder-gray-500 focus:border-fuchsia-500 focus:ring-1 focus:ring-fuchsia-500/30 transition"
           />
 
           <input
             type="tel"
             placeholder="Phone Number"
-            className="w-full px-3 py-2 bg-gray-800/60 border border-gray-700 rounded-lg text-sm text-gray-100 placeholder-gray-500 focus:border-fuchsia-500 focus:ring-1 focus:ring-fuchsia-500/30 transition"
+            className="w-full px-3 py-1.5 bg-gray-800/60 border border-gray-700 rounded-lg text-sm text-gray-100 placeholder-gray-500 focus:border-fuchsia-500 focus:ring-1 focus:ring-fuchsia-500/30 transition"
           />
 
           {/* Contact Reason */}
@@ -189,11 +181,11 @@ export default function Contact() {
               <span className="w-1.5 h-1.5 bg-fuchsia-500 rounded-full"></span>
               Why are you contacting?
             </p>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-2 gap-1.5">
               {contactReasons.map((reason, idx) => (
                 <label
                   key={idx}
-                  className="px-3 py-2 rounded-lg bg-gray-800/70 border border-gray-700 text-gray-200 text-xs font-medium cursor-pointer hover:border-fuchsia-400 hover:bg-fuchsia-500/20 hover:text-fuchsia-100 transition-all duration-300"
+                  className="px-3 py-1.5 rounded-lg bg-gray-800/70 border border-gray-700 text-gray-200 text-xs font-medium cursor-pointer hover:border-fuchsia-400 hover:bg-fuchsia-500/20 hover:text-fuchsia-100 transition-all duration-300"
                 >
                   <input
                     type="radio"
@@ -211,7 +203,7 @@ export default function Contact() {
           <textarea
             placeholder="Your message..."
             rows="3"
-            className="w-full px-3 py-2 bg-gray-800/60 border border-gray-700 rounded-lg text-sm text-gray-100 placeholder-gray-500 focus:border-fuchsia-500 focus:ring-1 focus:ring-fuchsia-500/30 transition resize-none"
+            className="w-full px-3 py-1.5 bg-gray-800/60 border border-gray-700 rounded-lg text-sm text-gray-100 placeholder-gray-500 focus:border-fuchsia-500 focus:ring-1 focus:ring-fuchsia-500/30 transition resize-none"
           ></textarea>
 
           {/* Submit Button */}
@@ -223,16 +215,11 @@ export default function Contact() {
           >
             <Send className="inline-block w-4 h-4 mr-2" /> Send Message
           </Motion.button>
-        </Motion.form>
+        </form>
       </div>
 
       {/* Section 3: Map */}
-      <Motion.div
-        className="relative h-[400px] overflow-hidden w-[90%] mx-auto p-4"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
+      <div className="relative h-[400px] overflow-hidden w-[90%] mx-auto p-4">
         <iframe
           title="Mohali Location"
           src="https://www.google.com/maps?q=Mohali,+Punjab,+India&output=embed"
@@ -243,13 +230,8 @@ export default function Contact() {
           loading="lazy"
           className="rounded-t-2xl grayscale-[40%] hover:grayscale-0 transition-all duration-700"
         ></iframe>
-        <Motion.div
-          className="absolute inset-0 bg-gradient-to-t from-gray-950/60 to-transparent pointer-events-none"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-        ></Motion.div>
-      </Motion.div>
+        <div className="[contain:layout] absolute inset-0 bg-gradient-to-t from-gray-950/60 to-transparent pointer-events-none"></div>
+      </div>
     </section>
   );
 }
