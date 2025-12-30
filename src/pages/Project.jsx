@@ -14,7 +14,6 @@ import {
   FaGoogle,
 } from "react-icons/fa";
 
-// Sample projects data
 const projects = [
   {
     id: 1,
@@ -287,7 +286,10 @@ function Projects() {
   const regularProjects = projects.filter((p) => !p.featured);
 
   return (
-    <section ref={sectionRef} className="py-20 px-6 sm:px-12 bg-black">
+    <section
+      ref={sectionRef}
+      className="py-20 px-6 sm:px-12 bg-gradient-to-l from-orange-400"
+    >
       <Motion.div style={{ opacity, scale }} className="max-w-7xl mx-auto">
         {/* Header */}
         <Motion.div
@@ -300,7 +302,7 @@ function Projects() {
           <h2 className="text-6xl md:text-7xl font-bold text-white mb-4">
             Featured Work
           </h2>
-          <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl  text-gray-400 max-w-3xl mx-auto">
             A showcase of projects that blend innovation with elegant design
           </p>
         </Motion.div>
