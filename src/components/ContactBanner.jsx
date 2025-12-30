@@ -1,76 +1,87 @@
-import { Clock, HeadphonesIcon, RefreshCcw } from "lucide-react";
-import { motion as Motion } from "framer-motion";
-import { lazy } from "react";
-
-const Prism = lazy(() => import("../backgrounds/prism/Prism.jsx"));
+import { Clock, HeadphonesIcon, RefreshCw } from "lucide-react";
 
 const bannerData = [
   {
-    icon: <HeadphonesIcon className="w-5 h-5 text-indigo-800" />,
+    icon: <HeadphonesIcon className="w-5 h-5" />,
     title: "24/7 Assistance",
     desc: "Always available to help with your queries anytime, anywhere.",
   },
   {
-    icon: <RefreshCcw className="w-5 h-5 text-indigo-800" />,
-    title: "Quick Change Resolutions",
-    desc: "Rapid turnaround for revisions and project updates.",
+    icon: <RefreshCw className="w-5 h-5 animate-spin-slow" />,
+    title: "Quick Resolutions",
+    desc: "Rapid turnaround for revisions and project updates within hours.",
   },
   {
-    icon: <Clock className="w-5 h-5 text-indigo-800" />,
-    title: "Flexible Working Hours",
-    desc: "Adapting to your timezone and schedule for seamless collaboration.",
+    icon: <Clock className="w-5 h-5" />,
+    title: "Flexible Hours",
+    desc: "Adapting to your timezone for seamless collaboration.",
   },
 ];
 
 function ContactBanner() {
   return (
-    <div className="w-full h-screen relative z-10">
-      <Prism
-        animationType="rotate"
-        timeScale={0.5}
-        height={3.5}
-        baseWidth={5.5}
-        scale={3.6}
-        hueShift={0}
-        colorFrequency={1}
-        noise={0.5}
-        glow={1}
-      />
+    <div className="w-full h-screen">
+      {/* Content - Centered & Compact */}
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 sm:px-8 max-w-4xl mx-auto py-8">
+        {/* Compact Main Title */}
+        <div className="m-6 sm:mb-10">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black bg-gradient-to-r from-white via-slate-100 to-gray-200 bg-clip-text text-transparent drop-shadow-xl leading-tight tracking-tight">
+            Let's Get In Touch
+          </h1>
+          <div className="w-24 h-px mx-auto mt-4 bg-gradient-to-r from-fuchsia-400 to-cyan-400 rounded-full shadow-md" />
+        </div>
 
-      <div className="absolute top-0 w-full h-full flex flex-col items-center justify-center text-center">
-        <Motion.h1
-          className="text-4xl md:text-5xl font-extrabold text-white mb-4"
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          Let’s Get In Touch
-        </Motion.h1>
+        {/* Compact Subtitle */}
+        <p className="text-lg sm:text-xl md:text-2xl text-gray-200/90 font-light mb-8 max-w-lg mx-auto leading-relaxed backdrop-blur-sm">
+          Here’s what my satisfied clients say
+        </p>
 
-        <Motion.p
-          className="text-gray-300 text-lg mb-12"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4, duration: 0.6 }}
-        >
-          Here’s what my satisfied clients say about me.
-        </Motion.p>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        {/* Compact Feature Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-6 w-full px-2 max-w-5xl">
           {bannerData.map((item, idx) => (
-            <Motion.div
+            <div
               key={idx}
-              className="bg-white/90 p-3 rounded-xl border border-white/40 shadow-xl transition-all duration-300"
-              whileHover={{ scale: 1.05 }}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ ease: "linear", duration: 1.2 }}
+              className="
+        group relative rounded-2xl p-6 sm:p-7
+        bg-white/10 backdrop-blur-lg
+        border border-white/15 hover:border-white/30
+        shadow-lg hover:shadow-fuchsia-500/20
+        transition-all duration-300 ease-out
+        hover:-translate-y-1
+        [contain:layout]
+      "
             >
-              <div className="flex items-center justify-center gap-2">
-                {item.icon}
-                <h3 className="font-light text-indigo-800">{item.title}</h3>
+              {/* Icon + Title */}
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <div
+                  className="
+            flex h-12 w-12 shrink-0 items-center justify-center rounded-xl
+            bg-gradient-to-br from-fuchsia-500 to-cyan-500
+            shadow-md
+          "
+                >
+                  {item.icon}
+                </div>
+
+                <h3
+                  className="
+            text-lg sm:text-xl font-semibold
+            bg-gradient-to-r from-white to-gray-200
+            bg-clip-text text-transparent
+            group-hover:from-fuchsia-400 group-hover:to-cyan-400
+            transition-colors duration-300
+            whitespace-nowrap
+          "
+                >
+                  {item.title}
+                </h3>
               </div>
-            </Motion.div>
+
+              {/* Description */}
+              <p className="text-sm sm:text-base leading-relaxed text-gray-300">
+                {item.desc}
+              </p>
+            </div>
           ))}
         </div>
       </div>
