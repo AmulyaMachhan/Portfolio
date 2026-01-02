@@ -62,16 +62,16 @@ function ContactForm() {
     <form
       ref={formRef}
       onSubmit={(e) => handleSubmit(e)}
-      className="relative bg-gray-900 backdrop-blur-xl px-6 py-4 rounded-2xl border border-fuchsia-600/30 
-               space-y-3 overflow-hidden
-             hover:shadow-[0_0_40px_-10px_rgba(236,72,153,0.5)] transition-shadow duration-500"
+      className="relative bg-white/5 backdrop-blur-xl px-8 py-10 rounded-3xl border border-white/10
+               space-y-6 overflow-hidden animate-fadeIn
+               hover:bg-white/[0.07] hover:border-white/20 transition-all duration-700"
     >
       {/* Header */}
-      <div className="text-center space-y-1 relative z-10">
-        <h3 className="text-2xl font-bold bg-gradient-to-r from-fuchsia-300 to-indigo-300 bg-clip-text text-transparent">
+      <div className="text-center space-y-2 relative z-10">
+        <h3 className="text-3xl font-semibold text-white tracking-tight">
           Get In Touch
         </h3>
-        <p className="text-gray-400 text-sm font-medium">
+        <p className="text-gray-400 text-base font-light">
           We'll get back to you soon
         </p>
       </div>
@@ -84,7 +84,9 @@ function ContactForm() {
           placeholder="First Name"
           value={firstName}
           onChange={(e) => setFirstName(e.target.value)}
-          className="px-3 py-1.5 bg-gray-800/60 border border-gray-700 rounded-lg text-sm text-gray-100 placeholder-gray-500 focus:border-fuchsia-500 focus:ring-1 focus:ring-fuchsia-500/30 transition"
+          className="px-4 py-3.5 bg-white/5 border rounded-xl text-base text-gray-100 
+                     placeholder-gray-300 font-light backdrop-blur-sm
+                     transition-all duration-500 ease-out"
         />
 
         <input
@@ -93,7 +95,9 @@ function ContactForm() {
           placeholder="Last Name"
           value={lastName}
           onChange={(e) => setLastName(e.target.value)}
-          className="px-3 py-1.5 bg-gray-800/60 border border-gray-700 rounded-lg text-sm text-gray-100 placeholder-gray-500 focus:border-fuchsia-500 focus:ring-1 focus:ring-fuchsia-500/30 transition"
+          className="px-4 py-3.5 bg-white/5 border rounded-xl text-base text-gray-100 
+                     placeholder-gray-300 font-light backdrop-blur-sm
+                     transition-all duration-500 ease-out"
         />
       </div>
 
@@ -103,7 +107,9 @@ function ContactForm() {
         placeholder="Email Address"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        className="w-full px-3 py-1.5 bg-gray-800/60 border border-gray-700 rounded-lg text-sm text-gray-100 placeholder-gray-500 focus:border-fuchsia-500 focus:ring-1 focus:ring-fuchsia-500/30 transition"
+        className="w-full px-4 py-3.5 bg-white/5 border rounded-xl text-base text-gray-100 
+                   placeholder-gray-300 font-light backdrop-blur-sm
+                   transition-all duration-500 ease-out"
       />
 
       <input
@@ -112,7 +118,9 @@ function ContactForm() {
         placeholder="Phone Number"
         value={phoneNumber}
         onChange={(e) => setPhoneNumber(e.target.value)}
-        className="w-full px-3 py-1.5 bg-gray-800/60 border border-gray-700 rounded-lg text-sm text-gray-100 placeholder-gray-500 focus:border-fuchsia-500 focus:ring-1 focus:ring-fuchsia-500/30 transition"
+        className="w-full px-4 py-3.5 bg-white/5 border rounded-xl text-base text-gray-100 
+                   placeholder-gray-300 font-light backdrop-blur-sm
+                   transition-all duration-500 ease-out"
       />
       {/* Contact Reason */}
       <div className="space-y-2 relative z-10">
@@ -154,7 +162,7 @@ function ContactForm() {
         placeholder="Your message..."
         rows="3"
         onChange={(e) => setMessage(e.target.value)}
-        className="w-full px-3 py-1.5 bg-gray-800/60 border border-gray-700 rounded-lg text-sm text-gray-100 placeholder-gray-500 focus:border-fuchsia-500 focus:ring-1 focus:ring-fuchsia-500/30 transition resize-none"
+        className="w-full px-3 py-1.5 bg-gray-800/60 border border-gray-700 rounded-lg text-sm text-gray-100 placeholder-gray-300 focus:border-fuchsia-500 focus:ring-1 focus:ring-fuchsia-500/30 transition resize-none"
       ></textarea>
 
       {/* Submit Button */}
