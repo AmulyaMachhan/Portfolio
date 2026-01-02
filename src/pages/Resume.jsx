@@ -2,109 +2,71 @@ import { Download } from "lucide-react";
 
 export default function Resume() {
   return (
-    <section className="mx-10 px-6 py-16 text-gray-100 bg-gradient-to-br from-silver-900 via-silver-800 to-silver-900 min-h-screen">
-      {/* Header */}
-      <header className="m-12 pb-8 border-b-4 bg-slate-800/90 backdrop-blur-xl rounded-3xl shadow-2xl p-8 -mx-6 border border-slate-700/50">
-        <div className="max-w-2xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-black bg-gradient-to-r from-fuchsia-400 via-pink-400 to-purple-400 bg-clip-text text-transparent mb-4 leading-tight drop-shadow-2xl">
-            Amulya Machhan
-          </h1>
-          <div className="flex flex-col md:flex-row md:items-center gap-4 mb-6">
-            <div className="flex items-center gap-2 text-xl text-slate-300">
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                <path
-                  fillRule="evenodd"
-                  d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                />
-              </svg>
-              Shimla, Himachal Pradesh
+    <section className="mx-auto px-6 py-20 text-gray-100 min-h-screen relative overflow-hidden bg-zinc-950">
+      {/* Background */}
+      <div className="fixed inset-0 z-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 via-slate-900 to-zinc-950" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.18),transparent_50%),radial-gradient(circle_at_70%_80%,rgba(99,102,241,0.14),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:32px_32px]" />
+      </div>
+
+      <div className="relative z-10">
+        {/* Header */}
+        <header className="max-w-6xl mx-auto mb-12 pb-12 border-b border-white/10 bg-white/5 backdrop-blur-xl rounded-3xl p-12 shadow-2xl">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-6xl md:text-7xl font-semibold text-white mb-4">
+              Amulya Machhan
+            </h1>
+
+            <div className="flex flex-col md:flex-row gap-6 mb-4">
+              <div className="text-gray-400">📍 Shimla, Himachal Pradesh</div>
+              <div className="hidden md:block w-px bg-white/20" />
+              <a
+                href="tel:+9198778XXXXX"
+                className="text-blue-400 hover:text-blue-300"
+              >
+                +91 98778 XXXXX
+              </a>
             </div>
-            <div className="w-px h-8 bg-slate-600 hidden md:block" />
-            <a
-              href="tel:+9198778 XXXXX"
-              className="flex items-center gap-2 text-xl text-fuchsia-400 hover:text-fuchsia-300 font-semibold transition-all duration-300 hover:scale-105"
-            >
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-              </svg>
-              +91 98778 XXXXX
-            </a>
-          </div>
-          <div className="flex flex-wrap gap-3">
-            {/* Social Links */}
-            <div className="flex flex-wrap gap-3">
-              {["GitHub", "LinkedIn", "Portfolio"].map((platform) => (
+
+            <div className="flex gap-4 mb-6">
+              {["GitHub", "LinkedIn", "Portfolio"].map((p) => (
                 <a
-                  key={platform}
+                  key={p}
                   href="#"
-                  className="group relative px-6 py-3 text-sm font-bold text-slate-200 bg-slate-700/50 hover:bg-fuchsia-500/20 border border-slate-600/50 hover:border-fuchsia-400/50 backdrop-blur-sm rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-fuchsia-500/25 flex items-center gap-2"
+                  className="px-6 py-3 bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition"
                 >
-                  {platform}
-                  <svg
-                    className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-all duration-300 ml-1 group-hover:translate-x-1"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
+                  {p}
                 </a>
               ))}
             </div>
 
-            {/* Download / View CV Buttons */}
-            <div className="flex flex-wrap gap-4 mt-8">
+            <div className="flex gap-4">
               <a
-                href="public/Resume_Amulya.pdf"
+                href="/Resume_Amulya.pdf"
                 download
-                className="inline-flex items-center gap-3 px-8 py-4
-               bg-gradient-to-r from-fuchsia-500 to-purple-500
-               text-white font-black text-lg rounded-2xl
-               shadow-xl hover:shadow-2xl hover:shadow-fuchsia-500/40
-               transition-all duration-300 hover:scale-105"
+                className="flex items-center gap-2 px-8 py-3 bg-blue-600 hover:bg-blue-500 rounded-full text-white transition"
               >
-                <Download />
-                Download CV
+                <Download className="w-5 h-5" /> Download CV
               </a>
-
               <a
-                href="public/Resume_Amulya.pdf"
+                href="/Resume_Amulya.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-8 py-4
-               bg-slate-700/60 hover:bg-slate-600/70
-               text-slate-200 font-black text-lg rounded-2xl
-               border border-slate-600/50 hover:border-fuchsia-400/50
-               shadow-xl transition-all duration-300 hover:scale-105"
+                className="px-8 py-3 bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition"
               >
-                <svg
-                  className="w-6 h-6"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M12 2a1 1 0 011 1v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0V7h-2a1 1 0 110-2h2V3a1 1 0 011-1z" />
-                  <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 100-2H5z" />
-                </svg>
                 View CV
               </a>
             </div>
           </div>
-        </div>
-      </header>
+        </header>
 
-      {/* Sections Grid */}
-      <div className="grid md:grid-cols-2 gap-8">
         {/* Education & Skills */}
-        <div className="space-y-8">
-          <section>
-            <h2 className="text-3xl font-black mb-8 bg-gradient-to-r from-fuchsia-400 via-pink-400 to-purple-400 bg-clip-text text-transparent flex items-center gap-4 drop-shadow-lg">
-              <span className="w-3 h-10 bg-gradient-to-b from-fuchsia-400 via-pink-400 to-purple-400 rounded-full shadow-lg" />
-              Education
-            </h2>
-            <div className="space-y-6">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+          <div className="space-y-10">
+            {/* Education */}
+            <section>
+              <h2 className="text-3xl font-semibold mb-6">Education</h2>
               {[
                 {
                   school: "Government Post Graduate College, Dharamshala",
@@ -116,243 +78,166 @@ export default function Resume() {
                   degree: "Higher Secondary Certificate",
                   info: "95.4%",
                 },
-              ].map((edu, idx) => (
+              ].map((e, i) => (
                 <div
-                  key={idx}
-                  className="group relative pl-10 pr-6 py-8 border-l-4 border-fuchsia-500/30 bg-slate-800/80 backdrop-blur-xl rounded-3xl hover:border-fuchsia-400/60 hover:bg-slate-700/80 transition-all duration-500 hover:shadow-2xl hover:shadow-fuchsia-500/20 hover:-translate-x-2"
+                  key={i}
+                  className="p-6 mb-4 bg-white/5 border border-white/10 rounded-xl"
                 >
-                  <div className="absolute left-0 w-6 h-6 bg-gradient-to-r from-fuchsia-500 to-purple-500 rounded-full -translate-x-3 shadow-lg group-hover:scale-125 group-hover:rotate-12 transition-all duration-500" />
-                  <h3 className="text-2xl font-bold text-slate-100 mb-2 leading-tight">
-                    {edu.school}
+                  <h3 className="text-lg font-semibold text-white">
+                    {e.school}
                   </h3>
-                  <p className="text-slate-300 font-semibold text-lg mb-3">
-                    {edu.degree}
-                  </p>
-                  <span className="inline-block px-4 py-2 bg-gradient-to-r from-fuchsia-500/20 to-purple-500/20 text-fuchsia-300 border border-fuchsia-500/40 font-bold rounded-2xl text-sm shadow-lg backdrop-blur-sm">
-                    {edu.info}
-                  </span>
+                  <p className="text-gray-400">{e.degree}</p>
+                  <span className="text-blue-400 text-sm">{e.info}</span>
                 </div>
               ))}
-            </div>
-          </section>
+            </section>
 
-          <section>
-            <h2 className="text-3xl font-black mb-8 bg-gradient-to-r from-fuchsia-400 via-pink-400 to-purple-400 bg-clip-text text-transparent flex items-center gap-4 drop-shadow-lg">
-              <span className="w-3 h-10 bg-gradient-to-b from-fuchsia-400 via-pink-400 to-purple-400 rounded-full shadow-lg" />
-              Skills & Technologies
-            </h2>
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { title: "Languages", items: ["JavaScript", "HTML5", "CSS3"] },
-                {
-                  title: "Frontend",
-                  items: ["React.js", "Tailwind CSS", "Bootstrap"],
-                },
-                {
-                  title: "Backend",
-                  items: ["Node.js", "Express.js", "MongoDB"],
-                },
-                { title: "Tools", items: ["Git/GitHub", "VS Code", "Postman"] },
-              ].map((category, idx) => (
-                <div
-                  key={idx}
-                  className="p-6 bg-slate-800/60 hover:bg-slate-700/80 border border-slate-700/50 hover:border-fuchsia-500/40 rounded-2xl hover:shadow-xl hover:shadow-fuchsia-500/20 transition-all duration-300 backdrop-blur-xl"
-                >
-                  <h4 className="font-bold mb-4 text-base uppercase tracking-wider text-fuchsia-400">
-                    {category.title}
-                  </h4>
-                  <div className="space-y-2">
-                    {category.items.map((skill, skillIdx) => (
-                      <span
-                        key={skillIdx}
-                        className="inline-block bg-slate-700/50 hover:bg-fuchsia-500/20 px-4 py-2 rounded-xl text-sm font-semibold text-slate-200 border border-slate-600/50 hover:border-fuchsia-400/50 hover:text-fuchsia-300 transition-all duration-300 backdrop-blur-sm"
-                      >
-                        {skill}
-                      </span>
-                    ))}
+            {/* Skills */}
+            <section>
+              <h2 className="text-3xl font-semibold mb-6">
+                Skills & Technologies
+              </h2>
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  ["Languages", ["JavaScript", "HTML", "CSS"]],
+                  ["Frontend", ["React", "Tailwind", "Bootstrap"]],
+                  ["Backend", ["Node", "Express", "MongoDB"]],
+                  ["Tools", ["Git", "GitHub", "Postman"]],
+                ].map(([title, items], i) => (
+                  <div
+                    key={i}
+                    className="p-4 bg-white/5 border border-white/10 rounded-xl"
+                  >
+                    <h4 className="text-blue-400 text-sm mb-3">{title}</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {items.map((s) => (
+                        <span
+                          key={s}
+                          className="px-3 py-1 bg-white/10 rounded-lg text-xs"
+                        >
+                          {s}
+                        </span>
+                      ))}
+                    </div>
                   </div>
+                ))}
+              </div>
+            </section>
+
+            {/* Interests */}
+            <section>
+              <h2 className="text-3xl font-semibold mb-6">Interests</h2>
+              {[
+                "🏀 Basketball & Lakers supporter",
+                "📚 Reading — Inner Engineering",
+                "🌌 Space & astronomy",
+              ].map((i) => (
+                <div
+                  key={i}
+                  className="p-4 mb-3 text-sm bg-white/5 border border-white/10 rounded-xl"
+                >
+                  {i}
                 </div>
               ))}
-            </div>
-          </section>
-        </div>
+            </section>
+          </div>
 
-        {/* Experience */}
-        <div className="space-y-8">
-          <section>
-            <h2 className="text-3xl font-black mb-8 bg-gradient-to-r from-fuchsia-400 via-pink-400 to-purple-400 bg-clip-text text-transparent flex items-center gap-4 drop-shadow-lg">
-              <span className="w-3 h-10 bg-gradient-to-b from-fuchsia-400 via-pink-400 to-purple-400 rounded-full shadow-lg" />
-              Work Experience
-            </h2>
-            <div className="space-y-6">
+          <div className="space-y-10">
+            {/* Experience */}
+            <div>
+              <h2 className="text-3xl font-semibold mb-6">Work Experience</h2>
               {[
                 {
                   role: "Freelance Web Developer",
                   company: "Early Learning Pvt. Ltd.",
-                  period: "Shimla • Jan 2025 – Present",
-                  achievements: [
-                    "Designed preschool website using React, React Router, and Zustand",
-                    "Built dynamic forms, animations, and interactive FAQs",
-                    "Integrated educational content and social media embeds",
+                  period: "Jan 2025 – Present",
+                  points: [
+                    "Built preschool website using React & Zustand",
+                    "Developed forms, animations, and FAQ sections",
                   ],
                 },
                 {
-                  role: "Frontend Web Developer",
+                  role: "Frontend Developer",
                   company: "Space Window",
-                  period: "Mohali • 6 Months",
-                  achievements: [
-                    "Enhanced UI/UX for multiple applications using React.js",
-                    "Built responsive interfaces and optimized API integrations",
-                    "Collaborated with backend teams for seamless delivery",
+                  period: "6 Months",
+                  points: [
+                    "Improved UI/UX using React",
+                    "Worked closely with backend team",
                   ],
                 },
-              ].map((job, idx) => (
+              ].map((job, i) => (
                 <div
-                  key={idx}
-                  className="group p-8 bg-slate-800/70 backdrop-blur-xl rounded-3xl border border-slate-700/50 shadow-xl hover:shadow-2xl hover:shadow-fuchsia-500/30 hover:border-fuchsia-400/50 transition-all duration-500 hover:-translate-y-1"
+                  key={i}
+                  className="mb-6 p-6 bg-white/5 border border-white/10 rounded-xl"
                 >
-                  <div className="flex items-start justify-between mb-4">
-                    <h3 className="text-2xl font-black text-slate-100 group-hover:text-fuchsia-300 transition-colors">
-                      {job.role}
-                    </h3>
-                    <span className="px-4 py-2 bg-gradient-to-r from-fuchsia-500/20 to-purple-500/20 text-xs font-bold text-fuchsia-300 border border-fuchsia-500/40 rounded-xl backdrop-blur-sm">
-                      {job.period}
-                    </span>
+                  <div className="flex justify-between mb-2">
+                    <h3 className="font-semibold">{job.role}</h3>
+                    <span className="text-blue-400 text-xs">{job.period}</span>
                   </div>
-                  <p className="text-slate-400 font-semibold text-lg mb-6">
-                    {job.company}
-                  </p>
-                  <ul className="space-y-3 text-base">
-                    {job.achievements.map((achievement, achIdx) => (
-                      <li
-                        key={achIdx}
-                        className="flex items-start gap-4 text-slate-300 group-hover:text-slate-100 transition-colors"
-                      >
-                        <div className="w-3 h-3 bg-gradient-to-r from-fuchsia-400 to-purple-400 rounded-full mt-2 flex-shrink-0 shadow-lg group-hover:scale-125 transition-all duration-300" />
-                        <span className="leading-relaxed">{achievement}</span>
+                  <p className="text-gray-400 mb-3">{job.company}</p>
+                  <ul className="space-y-2 text-sm">
+                    {job.points.map((p) => (
+                      <li key={p} className="flex gap-2">
+                        <span className="text-blue-400">•</span> {p}
                       </li>
                     ))}
                   </ul>
                 </div>
               ))}
             </div>
-          </section>
-        </div>
-      </div>
-
-      {/* Projects & Achievements */}
-      <div className="grid md:grid-cols-2 gap-8 mt-12">
-        <section>
-          <h2 className="text-3xl font-black mb-8 bg-gradient-to-r from-fuchsia-400 via-pink-400 to-purple-400 bg-clip-text text-transparent flex items-center gap-4 drop-shadow-lg">
-            <span className="w-3 h-10 bg-gradient-to-b from-fuchsia-400 via-pink-400 to-purple-400 rounded-full shadow-lg" />
-            Featured Projects
-          </h2>
-          <div className="space-y-6">
-            {[
-              {
-                name: "Thrifty — MERN E-commerce Store",
-                features: [
-                  "JWT authentication & Razorpay",
-                  "Admin dashboard & analytics",
-                  "Redux state management",
-                  "Fully responsive UI",
-                ],
-              },
-              {
-                name: "GeminiGPT — Custom AI Platform",
-                features: [
-                  "Google AI API integration",
-                  "Custom AI personalities",
-                  "Chat history & JSON export",
-                  "Real-time processing",
-                ],
-              },
-            ].map((project, idx) => (
-              <div
-                key={idx}
-                className="group p-8 bg-gradient-to-br from-slate-800/60 to-fuchsia-500/5 border-l-4 border-fuchsia-500/40 rounded-3xl hover:shadow-2xl hover:shadow-fuchsia-500/25 transition-all duration-500 hover:-translate-y-3 backdrop-blur-xl hover:border-fuchsia-400/60"
-              >
-                <h3 className="text-2xl font-black text-slate-100 mb-4 group-hover:text-fuchsia-300 transition-colors">
-                  {project.name}
-                </h3>
-                <div className="space-y-3">
-                  {project.features.map((feature, fIdx) => (
-                    <div
-                      key={fIdx}
-                      className="flex items-center gap-4 text-lg text-slate-300 group-hover:text-slate-100 transition-colors"
-                    >
-                      <div className="w-3 h-3 bg-fuchsia-500 rounded-full shadow-lg group-hover:scale-125 transition-transform" />
-                      {feature}
+            {/* Projects */}
+            <section>
+              <h2 className="text-3xl font-semibold mb-6">Featured Projects</h2>
+              {[
+                {
+                  name: "Thrifty — MERN E-commerce Store",
+                  features: [
+                    "JWT authentication & Razorpay",
+                    "Admin dashboard & analytics",
+                    "Redux state management",
+                    "Fully responsive UI",
+                  ],
+                },
+                {
+                  name: "GeminiGPT — Custom AI Platform",
+                  features: [
+                    "Google AI API integration",
+                    "Custom AI personalities",
+                    "Chat history & JSON export",
+                    "Real-time processing",
+                  ],
+                },
+              ].map((p, i) => (
+                <div
+                  key={i}
+                  className="mb-6 p-6 bg-white/5 border-l-2 border-blue-500 rounded-xl"
+                >
+                  <h3 className="font-semibold mb-3">{p.name}</h3>
+                  {p.features.map((f) => (
+                    <div key={f} className="text-sm mb-2 text-gray-300">
+                      • {f}
                     </div>
                   ))}
                 </div>
-              </div>
-            ))}
+              ))}
+            </section>
+
+            {/* Achievements */}
+            <section>
+              <h2 className="text-3xl font-semibold mb-4">Achievements</h2>
+              {[
+                "Internship at Solitaire Infosys",
+                "Web Development Certification (Udemy)",
+              ].map((a) => (
+                <div
+                  key={a}
+                  className="p-2 text-sm mb-3 bg-white/5 border border-white/10 rounded-xl"
+                >
+                  ✓ {a}
+                </div>
+              ))}
+            </section>
           </div>
-        </section>
-
-        <div className="space-y-8">
-          <section>
-            <h2 className="text-3xl font-black mb-8 bg-gradient-to-r from-fuchsia-400 via-pink-400 to-purple-400 bg-clip-text text-transparent flex items-center gap-4 drop-shadow-lg">
-              <span className="w-3 h-10 bg-gradient-to-b from-fuchsia-400 via-pink-400 to-purple-400 rounded-full shadow-lg" />
-              Achievements
-            </h2>
-            <div className="space-y-4">
-              {[
-                "Internship at Solitaire Infosys as Web Developer",
-                "Web Development Certification from Udemy",
-              ].map((achievement, idx) => (
-                <div
-                  key={idx}
-                  className="flex items-start gap-4 p-6 bg-slate-800/60 rounded-2xl border border-fuchsia-500/20 hover:shadow-xl hover:shadow-fuchsia-500/20 hover:bg-slate-700/80 transition-all duration-300 backdrop-blur-xl"
-                >
-                  <div className="w-10 h-10 bg-gradient-to-br from-fuchsia-500 to-purple-500 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-xl mt-0.5">
-                    <svg
-                      className="w-6 h-6 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                  <span className="text-slate-200 font-semibold text-lg leading-relaxed">
-                    {achievement}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          <section>
-            <h2 className="text-3xl font-black mb-8 bg-gradient-to-r from-fuchsia-400 via-pink-400 to-purple-400 bg-clip-text text-transparent flex items-center gap-4 drop-shadow-lg">
-              <span className="w-3 h-10 bg-gradient-to-b from-fuchsia-400 via-pink-400 to-purple-400 rounded-full shadow-lg" />
-              Interests
-            </h2>
-            <div className="grid grid-cols-1 gap-4 p-8 bg-gradient-to-br from-slate-800/60 to-fuchsia-500/5 border border-fuchsia-500/20 rounded-3xl backdrop-blur-xl shadow-2xl">
-              {[
-                {
-                  icon: "🏀",
-                  text: "Basketball enthusiast & Lakers supporter",
-                },
-                { icon: "📚", text: "Avid reader — Inner Engineering" },
-                { icon: "🌌", text: "Space exploration & astronomy" },
-              ].map((interest, idx) => (
-                <div
-                  key={idx}
-                  className="flex items-center gap-5 p-4 bg-slate-700/50 hover:bg-fuchsia-500/10 rounded-2xl hover:shadow-lg hover:shadow-fuchsia-500/20 transition-all duration-300 border border-slate-700/50 hover:border-fuchsia-400/30"
-                >
-                  <span className="text-3xl">{interest.icon}</span>
-                  <span className="font-semibold text-slate-200 text-lg">
-                    {interest.text}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </section>
         </div>
       </div>
     </section>
