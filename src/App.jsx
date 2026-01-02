@@ -3,7 +3,7 @@ import Home from "./pages/Home";
 import Projects from "./pages/Project";
 import Resume from "./pages/Resume";
 import Skills from "./pages/Skills";
-import Contact from "./pages/Contact";
+import Contact from "./pages/Contact/Contact";
 import Layout from "./layout/Layout";
 import About from "./pages/About";
 

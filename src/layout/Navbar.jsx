@@ -20,10 +20,10 @@ export default function Navbar() {
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 20, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="fixed left-1/2 transform -translate-x-1/2 top-2 z-50 
+      className="fixed left-1/2 transform -translate-x-1/2 top-0 z-50 
                  bg-white/10 backdrop-blur-xl border border-white/20
                  shadow-[0_4px_30px_rgba(0,0,0,0.1)]
-                 rounded-full px-6 py-2 flex justify-between items-center 
+                 rounded-full px-6 py-1 flex justify-between items-center 
                  w-[80%] sm:px-8"
     >
       {/* Brand */}
@@ -33,7 +33,7 @@ export default function Navbar() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="select-none cursor-pointer"
       >
-        <div className="w-20 h-10 overflow-hidden">
+        <div className="w-2.0 h-10 overflow-hidden">
           <Logo fill="#fff" className="w-full h-full" />
         </div>
       </Motion.div>
