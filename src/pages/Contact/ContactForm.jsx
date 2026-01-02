@@ -122,55 +122,54 @@ function ContactForm() {
                    placeholder-gray-300 font-light backdrop-blur-sm
                    transition-all duration-500 ease-out"
       />
-      {/* Contact Reason */}
-      <div className="space-y-2 relative z-10">
-        <p className="text-xs text-gray-300 font-semibold flex items-center gap-2">
-          <span className="w-1.5 h-1.5 bg-fuchsia-500 rounded-full"></span>
+
+      <div className="space-y-3 relative z-10">
+        <p className="text-sm text-gray-400 font-light flex items-center gap-2">
+          <span className="w-1 h-1 bg-fuchsia-500 rounded-full"></span>
           Why are you contacting?
         </p>
-        <div className="grid grid-cols-2 gap-1.5">
-          {contactReasons.map((r) => {
-            const isSelected = reason === r;
-
-            return (
-              <button
-                key={r}
-                type="button"
-                onClick={() => setReason(isSelected ? "" : r)}
-                className={`
-        px-3 py-1.5 rounded-lg border text-xs font-medium transition-all duration-300
-        ${
-          isSelected
-            ? "bg-fuchsia-500/30 border-fuchsia-400 text-fuchsia-100"
-            : "bg-gray-800/70 border-gray-700 text-gray-200 hover:border-fuchsia-400 hover:bg-fuchsia-500/20 hover:text-fuchsia-100"
-        }
-      `}
-              >
-                {r}
-              </button>
-            );
-          })}
-
+        <div className="grid grid-cols-2 gap-3">
+          {contactReasons.map((r) => (
+            <button
+              key={r}
+              name="reason"
+              type="button"
+              onClick={() => setReason(r)}
+              className={`px-4 py-3 rounded-xl text-sm font-light transition-all duration-500 ease-out
+                ${
+                  reason === r
+                    ? "bg-fuchsia-500/20 border border-fuchsia-500/50 text-fuchsia-300 shadow-lg shadow-fuchsia-500/10 scale-[1.02]"
+                    : "bg-white/5 border border-white/10 text-gray-300 hover:bg-white/10 hover:border-white/20 hover:text-white"
+                }`}
+            >
+              {r}
+            </button>
+          ))}
           <input type="hidden" name="reason" value={reason} />
         </div>
       </div>
 
-      {/* Message */}
       <textarea
+        placeholder="Your message..."
+        rows={4}
         name="message"
         value={message}
-        placeholder="Your message..."
-        rows="3"
         onChange={(e) => setMessage(e.target.value)}
-        className="w-full px-3 py-1.5 bg-gray-800/60 border border-gray-700 rounded-lg text-sm text-gray-100 placeholder-gray-300 focus:border-fuchsia-500 focus:ring-1 focus:ring-fuchsia-500/30 transition resize-none"
-      ></textarea>
+        className={`w-full px-4 py-3.5 bg-white/5 border rounded-xl text-base text-gray-100 
+                 placeholder-gray-500 font-light backdrop-blur-sm resize-none
+                 transition-all duration-500 ease-out`}
+      />
 
-      {/* Submit Button */}
       <button
-        type="submit"
-        className="w-full py-2.5 bg-gradient-to-r from-fuchsia-400 to-indigo-400 text-gray-900 font-semibold text-sm rounded-lg hover:from-fuchsia-300 hover:to-indigo-300 transition-all duration-300 shadow-md hover:shadow-lg"
+        type="button"
+        onClick={handleSubmit}
+        className="group w-full py-4 bg-white text-gray-900 font-medium text-base rounded-xl
+                 hover:bg-gray-100 transition-all duration-500 ease-out
+                 shadow-lg hover:shadow-xl hover:scale-[1.02]
+                 flex items-center justify-center gap-2"
       >
-        <Send className="inline-block w-4 h-4 mr-2" /> Send Message
+        <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-500" />
+        Send Message
       </button>
     </form>
   );

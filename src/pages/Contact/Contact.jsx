@@ -20,7 +20,7 @@ export default function Contact() {
       </div>
 
       {/* Section 3: Map */}
-      <div className="relative h-[400px] overflow-hidden w-[90%] mx-auto p-4">
+      <div className="relative h-[400px] overflow-hidden w-[90%] mx-auto p-4 mb-12">
         <iframe
           title="Mohali Location"
           src="https://www.google.com/maps?q=Mohali,+Punjab,+India&output=embed"
