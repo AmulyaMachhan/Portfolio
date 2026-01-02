@@ -20,7 +20,7 @@ export default function Navbar() {
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 20, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="fixed left-1/2 transform -translate-x-1/2 top-2 z-50 
+      className="fixed left-1/2 transform -translate-x-1/2 top-0 z-50 
                  bg-white/10 backdrop-blur-xl border border-white/20
                  shadow-[0_4px_30px_rgba(0,0,0,0.1)]
                  rounded-full px-6 py-2 flex justify-between items-center 
