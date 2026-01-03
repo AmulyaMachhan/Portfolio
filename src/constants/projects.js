@@ -1,55 +1,61 @@
-import * as ProjectImages from "../assets/project";
-
 export const projects = [
   {
     id: 1,
     title: "Thrifty",
     description:
-      "Thrifty is a full-featured e-commerce web application built using the MERN stack (MongoDB, Express.js, React.js, Node.js). It provides a seamless online shopping experience with a robust user authentication system, comprehensive admin management, and a modern, responsive user interface.",
-    techStack: ["MongoDB", "Express.js", "React.js", "Node.js"],
-    liveUrl: "https://thrifty-qqkh.vercel.app/",
+      "A full-stack e-commerce solution with real-time inventory management, secure payment processing, and advanced analytics dashboard.",
+    techStack: ["React", "Node", "MongoDB"],
+    image:
+      "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80",
+    liveUrl: "https://thrifty-qqkh.vercel.app",
     repoUrl: "https://github.com/AmulyaMachhan/Thrifty",
-    image: ProjectImages.Thrifty,
+    featured: true,
   },
   {
     id: 2,
-    title: "Early Learning",
+    title: "Universal App Opener",
     description:
-      "A preschool website built with React, Tailwind CSS, Zustand, and React Router DOM. Includes carousel, admissions, programs, and testimonial sections.",
-    techStack: ["React", "Tailwind CSS", "Zustand", "Axios"],
-    liveUrl: "https://earlylearning.vercel.app",
-    repoUrl: "https://github.com/AmulyaMachhan/early-learning",
-    image: ProjectImages.EarlyLearning,
+      "A JavaScript library that converts standard HTTP URLs (YouTube, LinkedIn) into Native Mobile Deep Links (Custom Schemes & Android Intents).",
+    techStack: ["Typescript", "React", "Node"],
+    image:
+      "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80",
+    liveUrl: "https://mdsaban.github.io/universal-app-opener/",
+    repoUrl: "https://github.com/AmulyaMachhan/universal-app-opener",
+    featured: true,
   },
   {
     id: 3,
-    title: "YouTube Clone",
+    title: "GeminiGPT",
     description:
-      "A full-stack YouTube clone application built with the MERN stack (MongoDB, Express, React, Node.js) that mimics the core features of YouTube, including video upload, playback, user authentication, and more.",
-    techStack: ["MongoDB", "Express", "React", "Node.js"],
-    liveUrl: null,
-    repoUrl: "https://github.com/AmulyaMachhan/Youtube-Clone",
-    image: "../assets/project/Youtube-Clone.png",
+      "GeminiGPT is an LLM based on the Gemini GPT architecture. It provides powerful natural language processing capabilities, enabling users to generate human-like text based on given prompts. This project leverages the Google Generative AI API for seamless integration and enhanced performance.",
+    techStack: ["React", "Node", "GoogleAPI"],
+    image:
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
+    repoUrl: "https://github.com",
+    featured: false,
   },
   {
     id: 4,
-    title: "Digital Clock",
+    title: "Early Learning",
     description:
-      "This project is a simple React application that displays a digital clock. The clock updates every second to show the current time in a 12-hour format with AM/PM indication.",
-    techStack: ["React", "JavaScript"],
-    liveUrl: "https://amulyamachhan.github.io/Digital-Clock/",
-    repoUrl: "https://github.com/AmulyaMachhan/Digital-Clock",
-    image: ProjectImages.Stopwatch,
+      "Early Learning is a real-time, production-ready client-side web application built for a preschool. This repository contains the frontend (client) code used by an actual preschool to showcase programs, facilities, admissions, and parent engagement features in a playful and child-friendly way",
+    techStack: ["React", "HTML", "CSS"],
+    image:
+      "https://images.unsplash.com/photo-1758790015863-4f9798bb818f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    liveUrl: "https://early-learning.vercel.app/",
+    repoUrl: null,
+    featured: true,
   },
   {
     id: 5,
-    title: "Instagram Clone",
+    title: "2048 Game",
     description:
-      "This project is a simplified version of Instagram, featuring dynamic post and story addition using JavaScript, as well as responsive design.",
-    techStack: ["JavaScript", "HTML", "CSS"],
-    liveUrl: null,
-    repoUrl: "https://github.com/AmulyaMachhan/instagram-clone",
-    image: ProjectImages.Instagram,
+      "2048 is a single-player sliding block puzzle game. The game's objective is to slide numbered tiles on a grid to combine them, with the goal of creating a tile with the number 2048. The game continues until there are no more valid moves available.",
+    techStack: ["Javasxript", "HTML", "CSS"],
+    image: "https://images.unsplash.com/photo-1703319952169-4a3ed572ba0f",
+    liveUrl: "https://amulyamachhan.github.io/2048-Game/",
+    repoUrl: "https://github.com/AmulyaMachhan/2048-Game/",
+    featured: false,
   },
   {
     id: 6,
@@ -57,28 +63,22 @@ export const projects = [
     description:
       "A utility to generate strong passwords using JavaScript, with options for length, symbols, etc.",
     techStack: ["JavaScript", "HTML", "CSS"],
-    liveUrl: null,
+    liveUrl: "https://amulyamachhan.github.io/passwordGenerator/",
     repoUrl: "https://github.com/AmulyaMachhan/passwordGenerator",
-    image: ProjectImages.PasswordGenerator,
+    image:
+      "https://private-user-images.githubusercontent.com/111338400/322226414-eccb6a73-b3ff-4a9f-bb3b-1dbe523c6fcf.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Njc0MTU4NTAsIm5iZiI6MTc2NzQxNTU1MCwicGF0aCI6Ii8xMTEzMzg0MDAvMzIyMjI2NDE0LWVjY2I2YTczLWIzZmYtNGE5Zi1iYjNiLTFkYmU1MjNjNmZjZi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwMTAzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDEwM1QwNDQ1NTBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iODI5ZWU5YzRhNWM1MWY1OTM1M2YyZDFjMDA4ZTU0ODA5OTIxY2UxMGVjZjhkZGRiZmVhZmE1OTgzNTY4NmY1JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.jRCBcRexM-NGFhJ5rMsegLbAmpthDaqhP0xR0N8J7Ms",
+    featured: false,
   },
   {
     id: 7,
-    title: "2048 Game",
-    description:
-      "A browser-based implementation of the 2048 puzzle game using JavaScript.",
-    techStack: ["JavaScript", "HTML", "CSS"],
-    liveUrl: null,
-    repoUrl: "https://github.com/AmulyaMachhan/2048-Game",
-    image: ProjectImages.Game2048,
-  },
-  {
-    id: 8,
     title: "Currency Converter",
     description:
       "A simple React + Vite currency converter app that fetches real-time exchange rates.",
     techStack: ["React.js", "Vite", "JavaScript"],
-    liveUrl: null,
+    liveUrl: "https://amulyamachhan.github.io/currencyConverter/",
     repoUrl: "https://github.com/AmulyaMachhan/currencyConverter",
-    image: ProjectImages.CurrencyConverter,
+    image:
+      "https://private-user-images.githubusercontent.com/111338400/322272446-10e849b8-51b3-4f19-87c8-be2fdb88ca34.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Njc0MTU5NzAsIm5iZiI6MTc2NzQxNTY3MCwicGF0aCI6Ii8xMTEzMzg0MDAvMzIyMjcyNDQ2LTEwZTg0OWI4LTUxYjMtNGYxOS04N2M4LWJlMmZkYjg4Y2EzNC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwMTAzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDEwM1QwNDQ3NTBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0wMWZjNmZmNzk2ZTdhYmY2MzE4NzQ4NjU2NDExMWY4OWMyNDZlNTVhZWFlYTA2MTY5ZGE0YzczYTRhOTNhNjMzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.wqUWaHo1BoSkVtlmd6CQdbzUnfkY5Z9dCrAAa8GXkio",
+    featured: false,
   },
 ];

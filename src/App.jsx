@@ -6,10 +6,11 @@ import Skills from "./pages/Skills";
 import Contact from "./pages/Contact/Contact";
 import Layout from "./layout/Layout";
 import About from "./pages/About";
+import PageWrapper from "./layout/PageWrapper";
 
 function App() {
   return (
-    <>
+    <PageWrapper>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -22,7 +23,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-    </>
+    </PageWrapper>
   );
 }
 
