@@ -1,42 +1,40 @@
 import { Clock, Headphones, RefreshCw } from "lucide-react";
 import { useEffect, useState } from "react";
 
-// Testimonial Carousel Component
 function TestimonialCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   const testimonials = [
     {
-      name: "Sarah Mitchell",
-      role: "CEO, TechFlow Solutions",
+      name: "Divya Bisht",
+      role: "CEO, Early Learning Preschool",
       content:
         "Working with Amulya was an absolute pleasure. The attention to detail and the innovative solutions provided exceeded our expectations. Our web application now runs flawlessly.",
       rating: 5,
       image:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9He3cAAHKqhznNX5kYio-ko_3UC4RTobRmQ&s",
     },
     {
-      name: "Michael Chen",
-      role: "Product Manager, Innovate Labs",
+      name: "Vishal Sharma",
+      role: "Senior Software Developer, Space Window",
       content:
         "Exceptional React development skills! The UI/UX design was modern, responsive, and exactly what we needed. Delivered on time and within budget.",
       rating: 5,
       image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqy3fSDm4AGNNsIaHrUDcQ7OXYix_P3mHCiQ&s",
     },
     {
-      name: "Emily Rodriguez",
-      role: "Founder, Creative Studios",
+      name: "Vishrut Abrol",
+      role: "Backend Developer, JC Software Solution",
       content:
-        "The level of professionalism and technical expertise was outstanding. Our e-commerce platform is now lightning-fast and conversion rates have increased by 40%.",
+        "The level of professionalism and technical expertise was outstanding. Understanding the requirements and delivering what exactly is needed.",
       rating: 5,
-      image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop",
+      image: "https://avatars.githubusercontent.com/u/242852330?v=4",
     },
     {
-      name: "David Park",
-      role: "CTO, DataSync Inc",
+      name: "Apurav Uppal",
+      role: "Software Developer, Techno Park IT",
       content:
         "Highly recommend! The full-stack development was seamless, and the communication throughout the project was excellent. A true professional.",
       rating: 5,
@@ -60,7 +58,7 @@ function TestimonialCarousel() {
 
     const interval = setInterval(() => {
       nextSlide();
-    }, 5000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, [currentIndex, isAutoPlaying]);
