@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import CurvedLoop from "../components/CurvedLoop";
 
 function About() {
@@ -112,12 +113,10 @@ function About() {
                         experiences that users love.
                       </p>
                       <p>
-                        With{" "}
-                        <span className="text-white font-medium">5+ years</span>{" "}
-                        of experience in the industry, I've worked with startups
-                        and established companies to bring their visions to
-                        life. My approach combines technical excellence with
-                        thoughtful design.
+                        Almost all my life i wanted to be creative and extra
+                        ordinary Doing this makes me achieve that dream, to
+                        enhance and create something elegant yet helpful to
+                        people.
                       </p>
                       <p className="text-white/60">
                         When I'm not crafting pixels and code, you'll find me
@@ -132,11 +131,19 @@ function About() {
                   {/* Quick Links */}
                   <div className="flex flex-wrap gap-4 pt-4">
                     {[
-                      { label: "GitHub", icon: "→" },
-                      { label: "LinkedIn", icon: "→" },
-                      { label: "Resume", icon: "↓" },
+                      {
+                        label: "GitHub",
+                        icon: "→",
+                        url: "https://github.com/AmulyaMachhan",
+                      },
+                      {
+                        label: "LinkedIn",
+                        icon: "→",
+                        url: "https://www.linkedin.com/in/amulya-machhan-5876bb261/",
+                      },
                     ].map((link, i) => (
-                      <button
+                      <a
+                        href={link.url}
                         key={i}
                         className="group px-6 py-3 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/30 transition-all duration-300 hover:scale-105"
                       >
@@ -146,8 +153,19 @@ function About() {
                             {link.icon}
                           </span>
                         </span>
-                      </button>
+                      </a>
                     ))}
+                    <Link
+                      to="/resume"
+                      className="group px-6 py-3 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/30 transition-all duration-300 hover:scale-105"
+                    >
+                      <span className="text-white/80 group-hover:text-white font-medium text-sm flex items-center gap-2">
+                        Resume
+                        <span className="group-hover:translate-x-1 group-hover:translate-y-0.5 transition-transform">
+                          ↓
+                        </span>
+                      </span>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -316,7 +334,10 @@ function About() {
                 </div>
 
                 <div className="flex flex-wrap justify-center gap-4">
-                  <button className="group relative px-10 py-5 bg-white text-black font-semibold text-lg rounded-full hover:scale-105 transition-all duration-300 overflow-hidden shadow-2xl">
+                  <Link
+                    to="/contact"
+                    className="group relative px-10 py-5 bg-white text-black font-semibold text-lg rounded-full hover:scale-105 transition-all duration-300 overflow-hidden shadow-2xl"
+                  >
                     <span className="relative z-10 flex items-center gap-2">
                       Get In Touch
                       <svg
@@ -334,11 +355,14 @@ function About() {
                       </svg>
                     </span>
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  </button>
+                  </Link>
 
-                  <button className="px-10 py-5 bg-white/5 hover:bg-white/10 text-white font-semibold text-lg rounded-full border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105">
+                  <Link
+                    to="/projects"
+                    className="px-10 py-5 bg-white/5 hover:bg-white/10 text-white font-semibold text-lg rounded-full border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105"
+                  >
                     View My Work
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
