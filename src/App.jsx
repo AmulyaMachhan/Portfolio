@@ -7,11 +7,13 @@ import Contact from "./pages/Contact/Contact";
 import Layout from "./layout/Layout";
 import About from "./pages/About";
 import PageWrapper from "./layout/PageWrapper";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <PageWrapper>
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route path="/" index={true} element={<Home />} />
