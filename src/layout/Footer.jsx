@@ -1,4 +1,5 @@
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Link } from "react-router";
 
 export default function Footer() {
   return (
@@ -21,11 +22,32 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-white/60">
-              <li className="hover:text-white transition">Home</li>
-              <li className="hover:text-white transition">About</li>
-              <li className="hover:text-white transition">Projects</li>
-              <li className="hover:text-white transition">Skills</li>
-              <li className="hover:text-white transition">Contact</li>
+              {[
+                {
+                  label: "Home",
+                  link: "/home",
+                },
+                {
+                  label: "About",
+                  link: "/about",
+                },
+                {
+                  label: "Resume",
+                  link: "/resume",
+                },
+                {
+                  label: "Contact",
+                  link: "/contact",
+                },
+                {
+                  label: "Projects",
+                  link: "/projects",
+                },
+              ].map((l, idx) => (
+                <li key={idx} className="hover:text-white transition">
+                  <Link to={l.link}>{l.label}</Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -34,7 +56,7 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4">Connect</h3>
             <div className="flex justify-center md:justify-start gap-4">
               <a
-                href="https://github.com/"
+                href="https://github.com/AmulyaMachhan"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition"
@@ -42,7 +64,7 @@ export default function Footer() {
                 <Github className="w-5 h-5 text-white" />
               </a>
               <a
-                href="https://linkedin.com/"
+                href="https://www.linkedin.com/in/amulya-machhan-5876bb261/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition"
@@ -50,13 +72,13 @@ export default function Footer() {
                 <Linkedin className="w-5 h-5 text-white" />
               </a>
               <a
-                href="mailto:youremail@example.com"
+                href="mailto:machhanamulya@example.com"
                 className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition"
               >
                 <Mail className="w-5 h-5 text-white" />
               </a>
               <a
-                href="https://twitter.com/"
+                href="https://twitter.com/2o504/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition"
@@ -75,7 +97,7 @@ export default function Footer() {
           <span>
             © {new Date().getFullYear()} Amulya Machhan. All rights reserved.
           </span>
-          <span>Designed & Built with ❤️ using React</span>
+          <span>Designed & Built using React</span>
         </div>
       </div>
 
