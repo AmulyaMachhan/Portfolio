@@ -1,18 +1,41 @@
-# React + Vite
+# 🚀 Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive personal portfolio website built using **React** to showcase projects, skills, experience, and contact information. Designed with clean UI, smooth navigation, and scalable architecture.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🖥️ Live Demo
+👉 http://amulya-machhan.vercel.com
 
-## React Compiler
+---
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## 📌 Features
 
-Note: This will impact Vite dev & build performances.
+- ⚛️ Built with React (Component-based architecture)
+- 📱 Fully responsive design (Mobile-first)
+- 🎨 Modern UI/UX with smooth animations
+- 🧭 Client-side routing using React Router
+- 📄 Dedicated sections:
+  - Home
+  - About
+  - Skills
+  - Projects
+  - Resume
+  - Contact
+- ✉️ Contact form integration
+- 🚀 Optimized for performance and SEO
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+- **Frontend:** React, JavaScript (ES6+)
+- **Styling:** CSS / Tailwind CSS / Bootstrap *(as applicable)*
+- **Routing:** React Router DOM
+- **Icons:** Lucide React / React Icons
+- **State Management:** useState, useEffect *(or Zustand if used)*
+- **Deployment:** Vercel / Netlify / GitHub Pages
+
+---
+
+
