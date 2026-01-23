@@ -52,7 +52,8 @@ export const projects = [
     description:
       "2048 is a single-player sliding block puzzle game. The game's objective is to slide numbered tiles on a grid to combine them, with the goal of creating a tile with the number 2048. The game continues until there are no more valid moves available.",
     techStack: ["Javasxript", "HTML", "CSS"],
-    image: "https://images.unsplash.com/photo-1703319952169-4a3ed572ba0f",
+    image:
+      "https://images.unsplash.com/photo-1703319952169-4a3ed572ba0f?q=80&w=1170&auto=format&fit=crop",
     liveUrl: "https://amulyamachhan.github.io/2048-Game/",
     repoUrl: "https://github.com/AmulyaMachhan/2048-Game/",
     featured: false,
@@ -65,7 +66,8 @@ export const projects = [
     techStack: ["JavaScript", "HTML", "CSS"],
     liveUrl: "https://amulyamachhan.github.io/passwordGenerator/",
     repoUrl: "https://github.com/AmulyaMachhan/passwordGenerator",
-    image: "https://images.unsplash.com/photo-1696013910376-c56f76dd8178",
+    image:
+      "https://images.unsplash.com/photo-1696013910376-c56f76dd8178?q=80&w=1170&auto=format&fit=crop",
     featured: false,
   },
   {
@@ -76,7 +78,8 @@ export const projects = [
     techStack: ["React.js", "Vite", "JavaScript"],
     liveUrl: "https://amulyamachhan.github.io/currencyConverter/",
     repoUrl: "https://github.com/AmulyaMachhan/currencyConverter",
-    image: "https://images.unsplash.com/photo-1622191020772-48880b6f1468",
+    image:
+      "https://images.unsplash.com/photo-1622191020772-48880b6f1468?q=80&w=1170&auto=format&fit=crop",
     featured: false,
   },
 ];
