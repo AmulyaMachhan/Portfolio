@@ -65,8 +65,7 @@ export const projects = [
     techStack: ["JavaScript", "HTML", "CSS"],
     liveUrl: "https://amulyamachhan.github.io/passwordGenerator/",
     repoUrl: "https://github.com/AmulyaMachhan/passwordGenerator",
-    image:
-      "https://private-user-images.githubusercontent.com/111338400/322226414-eccb6a73-b3ff-4a9f-bb3b-1dbe523c6fcf.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Njc0MTU4NTAsIm5iZiI6MTc2NzQxNTU1MCwicGF0aCI6Ii8xMTEzMzg0MDAvMzIyMjI2NDE0LWVjY2I2YTczLWIzZmYtNGE5Zi1iYjNiLTFkYmU1MjNjNmZjZi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwMTAzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDEwM1QwNDQ1NTBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iODI5ZWU5YzRhNWM1MWY1OTM1M2YyZDFjMDA4ZTU0ODA5OTIxY2UxMGVjZjhkZGRiZmVhZmE1OTgzNTY4NmY1JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.jRCBcRexM-NGFhJ5rMsegLbAmpthDaqhP0xR0N8J7Ms",
+    image: "https://images.unsplash.com/photo-1696013910376-c56f76dd8178",
     featured: false,
   },
   {
@@ -77,8 +76,7 @@ export const projects = [
     techStack: ["React.js", "Vite", "JavaScript"],
     liveUrl: "https://amulyamachhan.github.io/currencyConverter/",
     repoUrl: "https://github.com/AmulyaMachhan/currencyConverter",
-    image:
-      "https://private-user-images.githubusercontent.com/111338400/322272446-10e849b8-51b3-4f19-87c8-be2fdb88ca34.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Njc0MTU5NzAsIm5iZiI6MTc2NzQxNTY3MCwicGF0aCI6Ii8xMTEzMzg0MDAvMzIyMjcyNDQ2LTEwZTg0OWI4LTUxYjMtNGYxOS04N2M4LWJlMmZkYjg4Y2EzNC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwMTAzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDEwM1QwNDQ3NTBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0wMWZjNmZmNzk2ZTdhYmY2MzE4NzQ4NjU2NDExMWY4OWMyNDZlNTVhZWFlYTA2MTY5ZGE0YzczYTRhOTNhNjMzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.wqUWaHo1BoSkVtlmd6CQdbzUnfkY5Z9dCrAAa8GXkio",
+    image: "https://images.unsplash.com/photo-1622191020772-48880b6f1468",
     featured: false,
   },
 ];
