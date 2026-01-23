@@ -2,7 +2,7 @@ import { Download } from "lucide-react";
 
 export default function Resume() {
   return (
-    <section className="mx-auto px-6 py-20 text-gray-100 min-h-screen relative overflow-hidden bg-zinc-950">
+    <section className="mx-auto px-4 sm:px-6 py-20 text-gray-100 min-h-screen relative overflow-hidden bg-zinc-950">
       {/* Background */}
       <div className="fixed inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 via-slate-900 to-zinc-950" />
@@ -12,13 +12,13 @@ export default function Resume() {
 
       <div className="relative z-10">
         {/* Header */}
-        <header className="max-w-6xl mx-auto mb-12 pb-12 border-b border-white/10 bg-white/5 backdrop-blur-xl rounded-3xl p-12 shadow-2xl">
+        <header className="max-w-6xl mx-auto mb-12 pb-8 border-b border-white/10 bg-white/5 backdrop-blur-xl rounded-3xl p-6 md:p-12 shadow-2xl overflow-hidden">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-6xl md:text-7xl font-semibold text-white mb-4">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-semibold text-white mb-4 break-words">
               Amulya Machhan
             </h1>
 
-            <div className="flex flex-col md:flex-row gap-6 mb-4">
+            <div className="flex flex-col md:flex-row gap-4 mb-4 break-all">
               <div className="text-gray-400">📍 Shimla, Himachal Pradesh</div>
               <div className="hidden md:block w-px bg-white/20" />
               <a
@@ -29,31 +29,32 @@ export default function Resume() {
               </a>
             </div>
 
-            <div className="flex gap-4 mb-6">
+            <div className="flex flex-wrap gap-4 mb-6">
               {["GitHub", "LinkedIn", "Portfolio"].map((p) => (
                 <a
                   key={p}
                   href="#"
-                  className="px-6 py-3 bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition"
+                  className="px-3 text-sm md:text-medium md:px-6 py-3 bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition"
                 >
                   {p}
                 </a>
               ))}
             </div>
 
-            <div className="flex gap-4">
+            <div className="flex flex-wrap gap-4 text-sm md:text-md">
               <a
                 href="/Resume_Amulya.pdf"
                 download
-                className="flex items-center gap-2 px-8 py-3 bg-blue-600 hover:bg-blue-500 rounded-full text-white transition"
+                className="px-3 flex items-center gap-2 md:px-8 py-3 bg-blue-600 hover:bg-blue-500 rounded-full text-white transition"
               >
-                <Download className="w-5 h-5" /> Download CV
+                <Download className="w-5 h-5" />
+                Download CV
               </a>
               <a
                 href="/Resume_Amulya.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-3 bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition"
+                className="px-3 md:px-8 py-3 bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition"
               >
                 View CV
               </a>
@@ -185,6 +186,7 @@ export default function Resume() {
                 </div>
               ))}
             </div>
+
             {/* Projects */}
             <section>
               <h2 className="text-3xl font-semibold mb-6">Featured Projects</h2>
